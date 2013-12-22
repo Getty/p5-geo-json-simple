@@ -124,7 +124,7 @@ sub from_geo_json { Geo::JSON->from_json(@_) }
   # polygon don't need the first element repeated at the end
   polygon([qw( 100.0 0.0 101.0 0.0 101.0 1.0 100.0 1.0 )]);
 
-  collection(
+  geometrycollection(
     point(qw( 1.1 1.1 )), linestring(qw( 2.2 2.2 3.3 3.3 1.3 1.3 ))
   );
 
@@ -132,7 +132,7 @@ sub from_geo_json { Geo::JSON->from_json(@_) }
     gold_amount => 23,
     data => "Here is the gold";
 
-  geometrycollection(
+  featurecollection(
     point(qw( 34 55 )), player => 1,
     point(qw( 56 15 )), player => 2,
     point(qw( 87 33 )), player => 3,
